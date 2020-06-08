@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background-color: #eeeee6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-weight: 400;
+    /* vmin = Relative to 1% of viewport's smaller dimension */
+    font-size: 20px;
+}
+
+button,
+input[type="submit"] {
+    display: block;
+    background: #426CB4;
+    border: none;
+    padding: 0.6rem;
+    border-radius: .25em;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5vh;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 20rem;
+    max-height: 20rem;
+    background-color: white;
+    padding: 4em;
+    border-radius: 3%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 1em 0;
+    font-size: 0.85rem;
+}
+
+form div[id*=slide] {  display: none;}
+form div p { margin: 0 auto 40px; }
+form div[id=form-slide-5] { text-align: left;}
+
+input,
+textarea {  background-color: #eeeeeee6; }
+
+label { display: block; }
+
+ul {
+    text-align: left;
+    list-style: none;
+}
+textarea,
+label[id$=label] input  {
+    border: none;
+    display: block;
+    border-radius: .25em;
+    padding: 0.6rem;
+    margin: 1vh auto;
+    width: 90%;
+}
+
+fieldset,
+select { font-size: 16px;}
+
+#survey-end {  display: none;}
+
+#progressBar {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    -webkit-appearance: none;
+    border: none;
+    height: 1.5rem;
+}
+#progressBar::-webkit-progress-bar { background-color: white; }
+#progressBar::-webkit-progress-value { background-color: #F27649; }
+
+.continue { margin: 1vh auto; }

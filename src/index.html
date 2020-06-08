@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- For CodePen requirement checking -->
+    <script src="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form/"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Interest Survey</h1>
+    </header>
+
+    <main>
+        <div class="form-wrapper slide-wrapper">
+            <div class="progressbar">
+                <label></label>
+                <progress id="progressBar" type="range" value="1" max="5"></progress>
+            </div>
+            <form id="survey-form" name="survey" method="GET" action="thankyou.html">
+                <div id="form-intro">
+                    <h2><strong>Looking for a new apartment?</strong></h2>
+                    <p>Take a short survey and we'll give you first priority!</p>
+                    <button id="start" type="button">I want a better place!</button>
+                </div>
+                <div id="form-slide-1" onchange="checkOnChange(this)">
+                    <p> What's the single most important thing your next apartment HAS to have?</p>
+                    <select id="dropdown">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="Washer/Dryer">Washer/Dryer</option>
+                        <option value="Good Schools">Good schools</option>
+                        <option value="Luxury Features">Luxury Features</option>
+                    </select>
+                </div>
+                <div id="form-slide-2" onchange="checkOnChange(this)">
+                    <p>What are you expecting to pay?</p>
+                    <fieldset name="radial-options">
+                        <legend>Select one option</legend>
+                        <ul>
+                            <li><input type="radio" name="cost" value="1-10">$900-$1200</li>
+                            <li><input type="radio" name="cost" value="10-50">$1200-$1600</li>
+                            <li><input type="radio" name="cost" value="50+">$1600+</li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div id="form-slide-3" onchange="checkOnChange(this)">
+                    <p>When are you planning to move-in?</p>
+                    <fieldset name="radial-options-two">
+                        <legend>Select one option</legend>
+                        <ul>
+                            <li><input type="radio" name="timeframe" value="ASAP">ASAP</li>
+                            <li><input type="radio" name="timeframe" value="In a month">In a month</li>
+                            <li><input type="radio" name="timeframe" value="3-6 Months">3-6 Months</li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div id="form-slide-4" onchange="checkOnChange(this)">
+                    <p>How would you describe yourself?</p>
+                    <fieldset name="checkbox-options">
+                        <legend>Check all that apply</legend>
+                        <ul>
+                            <li><input type="checkbox" value="Yes">Pet Owner</li>
+                            <li><input type="checkbox" value="No">Parent</li>
+                            <li><input type="checkbox" value="Not sure">Student</li>
+                            <li><input type="checkbox" value="No">Business Owner</li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div id="form-slide-5">
+                    <h2>Let's keep in touch!</h2>
+                    <label id="name-label">Name
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </label>
+                    <label id="email-label">Email
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </label>
+                    <label id="number-label">Household Size
+                        <input type="number" id="number" min="1" max="115" placeholder="Age">
+                    </label>
+                    <textarea placeholder="Any comments or special requests?"></textarea>
+                    <input id="submit" type="submit">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>&copy; 2019 Eliro Realty | All rights reserved</footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
